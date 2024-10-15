@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script type="module">
+        import UniversalCookies from 'https://cdn.jsdelivr.net/npm/cookie-universal@2.2.2/+esm'
+        const cookies = new UniversalCookies();
+        cookies?.set('cookie_name', 'value');
+    </script>
 </head>
 
 <body>
