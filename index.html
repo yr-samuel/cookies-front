@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script type="module">
+    <!-- <script type="module">
         import UniversalCookies from 'https://cdn.jsdelivr.net/npm/cookie-universal@2.2.2/+esm'
         const cookies = new UniversalCookies();
-        cookies?.set('cookie_name', 'value', { domain: '.github.io'});
-    </script>
+        cookies?.set('cookie_name', 'value', { domain: 'github.io'});
+    </script> -->
 </head>
 
 <body>
     <script>
         async function onHttpRequest () {
             const response = await fetch('https://cookies-ma9i.onrender.com/same-site-none');
+            // const response = await fetch('http://localhost:8080/same-site-none', { credentials: 'include' });
             const data = await response.json();
+            console.log(data);
         }
     </script>
     <style>
@@ -53,6 +55,9 @@
         <button onclick="onHttpRequest()">
             same-site-none
         </button>
+        <a href="https://cookies-ma9i.onrender.com/same-site-none">
+            same-site-none anchor
+        </a>
     </div>
 </body>
 
